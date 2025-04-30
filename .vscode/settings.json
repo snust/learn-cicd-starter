@@ -2,7 +2,7 @@
 
     // format all files on save if a formatter is available
   
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
   
     // I use "goimports" instead of "gofmt"
   
@@ -14,7 +14,7 @@
   
     "[go]": {
   
-      "editor.formatOnSave": false,
+      "editor.formatOnSave": true,
   
       "editor.codeActionsOnSave": {
   
@@ -26,7 +26,7 @@
   
     "[go.mod]": {
   
-      "editor.formatOnSave": false,
+      "editor.formatOnSave": true,
   
       "editor.codeActionsOnSave": {
   
