@@ -27,7 +27,7 @@ jobs:
       - name: Run gosec
         run: gosec ./...
 
-  Style:
+  style:
     name: Style
     runs-on: ubuntu-latest
 
@@ -48,3 +48,17 @@ jobs:
 
       - name: Run staticcheck
         run: staticcheck ./...
+
+  oidc_debug_test:
+    name: A test of the oidc debugger
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write
+      
+    steps:
+      - name: Debug OIDC Claims
+        uses: github/actions-oidc-debugger@main
+        with:
+          audience: '${{ github.server_url }}/${{ github.repository_owner }}'
